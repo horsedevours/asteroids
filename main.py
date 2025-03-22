@@ -42,7 +42,7 @@ def main():
                 sys.exit(1)
             for shot in shots:
                 if asteroid.collision_check(shot):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
         updatable.update(dt)
         screen.fill((0,0,0))
